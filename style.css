@@ -1,0 +1,275 @@
+html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header {
+    background-color: black; /* Fondo negro */
+    padding: 20px 5vw;
+}
+/* Contenedor del header */
+.caja {
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    justify-content: space-between; /* Espacia el logo y la navegación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    max-width: 1200px; /* Limita el ancho del header */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+/* Estilos del logo */
+.logo {
+    height: 150px; /* Ajusta la altura del logo */
+    width: auto;
+    display: block;
+}
+
+/* Estilos de la barra de navegación */
+nav ul {
+    list-style: none; /* Elimina los estilos de lista */
+    display: flex; /* Alinea los elementos en fila */
+    gap: 30px; /* Espaciado entre elementos */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    color: white; /* Texto blanco */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    text-decoration: underline; /* Efecto al pasar el mouse */
+}
+
+
+/* Estilos para la sección HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ajusta la altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Texto blanco */
+    background: url('agujeronegro2.jpg') center/cover no-repeat;
+    
+}
+
+/* Capa difuminada sobre la imagen */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen */
+    backdrop-filter: blur(5px); /* Difumina la imagen */
+}
+
+/* Contenedor del contenido de la sección */
+.hero-content {
+    position: relative;
+    z-index: 1; /* Asegura que el texto esté encima del fondo */
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Estilo del botón */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: gray;
+    color: white;
+}
+/* Sección "Sobre Dark Side" */
+.sobre-darkside {
+    position: relative;
+    width: 100%;
+    padding: 80px 10%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, black 30%); /* Difuminado con la imagen anterior */
+    color: white;
+    text-align: center;
+}
+
+/* Imagen de la sección */
+.sobre-darkside img {
+    max-width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin: 20px 0;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5)); /* Efecto de brillo en la imagen */
+}
+
+/* Título */
+.sobre-darkside h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Párrafos */
+.sobre-darkside p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Resaltado en la misión */
+.sobre-darkside strong {
+    color: #ffcc00; /* Color dorado para destacar */
+}
+
+/* Transición de conexión con la sección anterior */
+.sobre-darkside::before {
+    content: "";
+    position: absolute;
+    top: -50px; /* Ajusta la conexión entre secciones */
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Sección de valores */
+.valores {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    padding: 60px 10%;
+}
+
+/* Título */
+.valores h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de lista + imagen */
+.valores-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espaciado entre imagen y lista */
+    flex-direction: row; /* Asegura que la imagen quede a la izquierda */
+}
+
+/* Imagen del astronauta */
+.valores-img {
+    max-width: 180px; /* Tamaño reducido del astronauta */
+    height: auto;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3)); /* Sombra sutil */
+}
+
+/* Lista de valores */
+.valores-lista {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    font-size: 20px;
+    line-height: 2;
+}
+
+/* Responsividad para pantallas pequeñas */
+
+@media (max-width: 768px) {
+    .logo {
+      height: 100px;
+    }
+  
+    nav ul {
+      gap: 20px;
+    }
+  
+    nav ul li {
+      font-size: 16px;
+    }
+  
+    .hero-content h2 {
+      font-size: 24px;
+    }
+  
+    .valores-contenedor {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .valores-img {
+      max-width: 150px;
+    }
+  
+    .valores-lista {
+      text-align: center;
+    }
+  
+    .sobre-darkside img {
+      max-width: 200px;
+    }
+  
+    .sobre-darkside p {
+      font-size: 16px;
+    }
+  
+    footer img {
+      max-width: 150px;
+    }
+  
+    footer p {
+      font-size: 12px;
+    }
+  }
+
+/* Estilos generales del footer */
+footer {
+    background-color: white; /* Fondo blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: center;
+}
+
+/* Imagen del logo */
+footer img {
+    max-width: 200px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre logo y texto */
+}
+
+/* Texto del footer */
+footer p {
+    color: black; /* Texto en negro */
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
