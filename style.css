@@ -265,6 +265,26 @@ footer p {
     margin: 0;
 }
 
+.footer-informacion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+.footer-info p {
+    margin: 0;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+  
+.icono-instagram {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-top: 1px; /* Ajuste fino para alinear mejor */
+}
+
 * {
     box-sizing: border-box;
 }
